@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<select name="box" id="box">
+		<option value="">默认皮肤</option>
+		<option value="red">红色皮肤</option>
+		<option value="blue">蓝色皮肤</option>
+		<option value="green">绿色皮肤</option>
+		<option value="pink">粉色皮肤</option>
+	</select>
+	<script>
+		var body = document.querySelector('body');
+		var box = document.querySelector('#box');
+		var bg = localStorage.getItem('bdbg') || '';
+		body.style.background = bg;
+		box.value = bg;
+
+		box.onchange = function(){
+			var bg = this.value;
+			body.style.background = bg;
+			localStorage.setItem('bdbg',bg);
+		}
+
+	</script>
+</body>
+</html>
