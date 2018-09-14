@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	/*交集选择器的作用原理与动画的关系*/
+		./*box.now .text{}
+		.box  .text{}*/
+		/*box {
+			
+			color: red;
+			background-color: #990000;
+		}*/
+		.box {
+			font-size: 20px;
+			color: red;
+		}
+		.box .now span{
+			/*width: 300px;*/
+			/*color:green;*/
+			font-size: 40px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="b" class="box">
+
+	<span>交集选择器的作用原理与动画的关系</span></div>
+	<script>
+		var box = document.getElementById('b');
+		box.classList.add("now");
+		// box.classList.add("qq");
+	</script>
+</body>
+</html>
